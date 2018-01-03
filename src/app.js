@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom'
 import {Provider} from 'react-redux'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import {createStore, applyMiddleware} from 'redux'
-import Container from './Container'
+//import Container from './Container'
+import Balton from './Balton'
 import thunk from 'redux-thunk'
 import reducer from './reducers'
 import * as Action from './actions.js'
@@ -38,6 +39,6 @@ setInterval(setState,TIMEOUT)
 
 ReactDOM.render((
 <Provider store = {store}>
-    <Container />
+    <Balton />
 </Provider>    
 ),document.getElementById('app'))

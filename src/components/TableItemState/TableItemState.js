@@ -36,7 +36,7 @@ class TableItemState extends Component {
     getValidationState() {
     let {value} = this.state
     let {limit} = this.props
-    return /\d+(\.\d+)?/.test(this.editRef ? this.editRef.value : value ) && !isNaN(this.editRef ? this.editRef.value : value) && (this.editRef ? this.editRef.value < limit : value < limit) ? 'success' : 'error'    
+    return /\d+(\.\d+)?/.test(this.editRef ? this.editRef.value : value ) && !isNaN(this.editRef ? this.editRef.value : value) && (this.editRef ? (this.editRef.value <= limit) : (value <= limit)) ? 'success' : 'error'    
     }
     render() {
     let {write, name, names, options, value, unmod} = this.props   
